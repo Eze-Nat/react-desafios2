@@ -7,7 +7,7 @@ const ItemDatabase = [{
         precio: 1000,
         img: "/img/img1.jpeg",
         categoria: "Ropa De Bebe",
-        stock: 10,
+        stock: 5,
         descripcion: "Detalle De Producto",
 },{
     id: 3,
@@ -23,7 +23,7 @@ const ItemDatabase = [{
     precio: 1000,
     img: "/img/img4.jpeg",
     categoria: "Ropa De Bebe",
-    stock: 10,
+    stock: 7,
     descripcion: "Detalle De Producto",
 },{
     id: 5,
@@ -31,7 +31,7 @@ const ItemDatabase = [{
     precio: 1000,
     img: "/img/img5.jpeg",
     categoria: "Ropa De Bebe",
-    stock: 10,
+    stock: 8,
     descripcion: "Detalle De Producto",
 },{
     id: 6,
@@ -39,7 +39,7 @@ const ItemDatabase = [{
     precio: 1000,
     img: "/img/img6.jpeg",
     categoria: "Ropa De Bebe",
-    stock: 10,
+    stock: 20,
     descripcion: "Detalle De Producto",
 },{
     id: 7,
@@ -47,7 +47,7 @@ const ItemDatabase = [{
     precio: 1000,
     img: "/img/img7.jpeg",
     categoria: "Ropa De Bebe",
-    stock: 10,
+    stock: 2,
     descripcion: "Detalle De Producto",
 },{
     id: 8,
@@ -63,7 +63,7 @@ const ItemDatabase = [{
     precio: 1000,
     img: "/img/img9.jpeg",
     categoria: "Ropa De Bebe",
-    stock: 10,
+    stock: 16,
     descripcion: "Detalle De Producto",
 }
 ];

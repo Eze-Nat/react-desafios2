@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, } from "react";
 import { faArrowUp, faArrowDown,} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/free-solid-svg-icons";
-import ItemDatabase from "../Productos/Productos";
 
-function ItemCount () {
+
+
+function ItemCount (props) {
+  
+    
   const [amount, setAmount] = useState(0);
   
 
@@ -16,7 +19,7 @@ function ItemCount () {
   };
 
   const increase = () => {
-    if (amount < 10)
+    if (amount < props.items.stock)
     setAmount(count => count + 1);
   };
 

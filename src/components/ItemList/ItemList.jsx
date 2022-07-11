@@ -17,7 +17,7 @@ export default function ItemList(props) {
             <p className="card-text">{cadaItem.descripcion}</p>
           </div>
           <div className="card-footer">
-              <ItemCount/>
+              <ItemCount items={cadaItem}/>
           </div>
           </div>
         
