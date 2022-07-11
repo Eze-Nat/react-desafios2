@@ -3,7 +3,7 @@ import CartWidget from "../CartWidget/CartWidget";
 const NavBar = () => {
     const title = "Urban Clothes";
     return (  
-<nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav className="navbar navbar-expand-lg bg-dark navbar-dark nav-justified">
     <div className="container-fluid">
         <a className="navbar-brand" href="#">
         {title}
@@ -11,7 +11,7 @@ const NavBar = () => {
         </a>
         <div className="navbar-brand">
       <CartWidget />
-  </div>  
+    </div>  
     <button
       className="navbar-toggler"
       type="button"
