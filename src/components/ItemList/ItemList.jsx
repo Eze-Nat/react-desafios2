@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemCount from './ItemCount';
+import ItemCount from '../ItemCount/ItemCount';
 
 export default function ItemList(props) {
   return (
@@ -7,6 +7,7 @@ export default function ItemList(props) {
     {
       props.items.map(
         cadaItem => {
+          
           return (
         
         
@@ -17,7 +18,7 @@ export default function ItemList(props) {
             <p className="card-text">{cadaItem.descripcion}</p>
           </div>
           <div className="card-footer">
-              <ItemCount items={cadaItem}/>
+              <ItemCount stock={cadaItem.stock}/>
           </div>
           </div>
         
