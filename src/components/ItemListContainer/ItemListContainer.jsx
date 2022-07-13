@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import ItemDatabase from "../Productos/Productos";
 import ItemList from "../ItemList/ItemList";
 
-
 function ItemListContainer(props) {
   
 
@@ -20,7 +19,7 @@ function ItemListContainer(props) {
           
           promiseItems.then(
             (respuesta) => {
-              setItems(ItemDatabase);
+              setItems(respuesta);
           
             }
           ).catch(

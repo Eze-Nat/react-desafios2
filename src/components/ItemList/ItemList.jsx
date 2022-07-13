@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
+import ItemListTest from '../ItemListTest';
 
 export default function ItemList(props) {
   return (
@@ -19,6 +20,7 @@ export default function ItemList(props) {
           </div>
           <div className="card-footer">
               <ItemCount stock={cadaItem.stock}/>
+              <ItemListTest items={cadaItem} test={"Prueba"}/>
           </div>
           </div>
         
