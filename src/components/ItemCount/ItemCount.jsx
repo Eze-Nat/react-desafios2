@@ -7,7 +7,7 @@ import "@fortawesome/free-solid-svg-icons";
 
 
 function ItemCount (props) {
-  
+    const {stock} = props;  
 
   const [amount, setAmount] = useState(0);
   
@@ -19,7 +19,7 @@ function ItemCount (props) {
   };
 
   const increase = () => {
-    if (amount < props.stock)
+    if (amount < stock)
     setAmount(amount + 1);
   };
 
