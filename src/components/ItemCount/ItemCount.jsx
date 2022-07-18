@@ -14,13 +14,13 @@ function ItemCount (props) {
 
   const decrease = () => {
     if (amount > 0) {
-      setAmount(count => count - 1);
+      setAmount(amount - 1);
     }
   };
 
   const increase = () => {
     if (amount < props.stock)
-    setAmount(count => count + 1);
+    setAmount(amount + 1);
   };
 
   return (

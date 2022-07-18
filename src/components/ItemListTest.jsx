@@ -2,10 +2,10 @@
 
 
 const ItemListTest = ({items, test}) => {
-    const {nombre, descripcion} = items;
+    const {nombre, descripcion, precio} = items;
     return (  
         <div>
-            <h1>{nombre}</h1>
+            <h1>{precio}</h1>
         </div>
     );
 }
