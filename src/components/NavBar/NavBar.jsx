@@ -25,7 +25,7 @@ const NavBar = () => {
     <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <ul class="navbar-nav">
+    <ul className="navbar-nav">
     
         <Link className="nav-link active" aria-current="page" to={"/"}>
         Home
@@ -33,16 +33,16 @@ const NavBar = () => {
         <Link className="nav-link" to={"/productos"}>
         Productos
         </Link>
-    <li class="nav-item dropdown" id="myDropdown">
-      <li class="nav-link dropdown-toggle" data-bs-toggle="dropdown">  Categorias  </li>
-      <ul class="dropdown-menu">
-        <li> <Link class="dropdown-item" to={"/categoria/ropadebebe"}> Ropa Bebe </Link></li>
-        <li> <Link class="dropdown-item" to={"/categoria/ropadebebe2anos"}> Ropa Bebe 2 Años </Link>
+    <ul className="nav-item dropdown" id="myDropdown">
+      <li className="nav-link dropdown-toggle" data-bs-toggle="dropdown">  Categorias  </li>
+      <ul className="dropdown-menu">
+        <li> <Link className="dropdown-item" to={"/categoria/ropadebebe"}> Ropa Bebe </Link></li>
+        <li> <Link className="dropdown-item" to={"/categoria/ropadebebe2anos"}> Ropa Bebe 2 Años </Link>
       </li>
-        <li><Link class="dropdown-item" to={"/categoria/ropadebebe3anos"}> Ropa Bebe 3 Años </Link></li>
-        <li><Link class="dropdown-item" to={"/categoria/ropadebebe4anos"}> Ropa Bebe 4 Años</Link></li>
+        <li><Link className="dropdown-item" to={"/categoria/ropadebebe3anos"}> Ropa Bebe 3 Años </Link></li>
+        <li><Link className="dropdown-item" to={"/categoria/ropadebebe4anos"}> Ropa Bebe 4 Años</Link></li>
       </ul>
-    </li>
+    </ul>
   </ul>
         <div className="navbar-nav">
         <Link className="nav-link disabled" to={"/registro"}>Registro</Link>
