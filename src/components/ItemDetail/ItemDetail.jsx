@@ -16,6 +16,7 @@ const ItemDetail = ({ item }) => {
           </div>
           <p className="">{descripcion}</p>
           <ItemCount stock={stock} initial={0} onAdd={onAdd} />
+          <button type="button" className="btn btn-outline-secondary mt-2">Comprar!</button>
         </div>
         <div></div>
       </div>
