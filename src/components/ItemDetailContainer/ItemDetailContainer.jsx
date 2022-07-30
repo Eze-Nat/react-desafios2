@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ItemDetallado from "../ProductDetail/ProductDetail";
 import Spinner from "../Utilidades/Spinner";
 
+
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const [loading, setLoading] = useState(false);

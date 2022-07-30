@@ -19,7 +19,7 @@ function App() {
         <Route path='/productos' element={<ItemListContainer/>} />
         <Route path='/item/:id' element={<ItemDetailContainer/>} />
         <Route path='*' element={<div style={{backgroundColor: "green"}}>ERROR </div>} />
-
+        <Route path='/cart' element={<div>Items de carrito</div>} />
         
 
       </Routes>
