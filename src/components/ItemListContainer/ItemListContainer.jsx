@@ -3,6 +3,7 @@ import ItemDatabase from "../Productos/Productos";
 import ItemList from "../ItemList/ItemList";
 import {useParams} from "react-router-dom";
 import Spinner from "../Utilidades/Spinner";
+import {getDoc, doc, getFirestore} from "firebase/firestore"
 
 function ItemListContainer(props) {
   const { categoria } = useParams();
@@ -13,11 +14,14 @@ function ItemListContainer(props) {
     setTimeout(() => resolve(ItemDatabase), 2000);
       });
       
-      
-
-    useEffect(() => {
-        setLoading(true)
-        promise.then((respuesta) => {
+  useEffect(() => {
+    const db = getFirestore();
+    const docRef = doc(db, "items", "1");
+    getDoc(docRef).then((snapshot) => console.log(snapshot));
+  
+  
+      setLoading(true);
+      promise.then((respuesta) => {
         const products = respuesta;
         if (categoria) {
           setItems(products.filter(producto => producto.categoria == categoria));
@@ -26,7 +30,14 @@ function ItemListContainer(props) {
         }
         setLoading(false)
       });
-    }, [categoria]);
+  
+  
+  }, [categoria])
+
+
+        
+        
+
 
     if(loading) return <Spinner />
 
