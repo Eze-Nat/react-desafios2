@@ -1,9 +1,14 @@
+import { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
+  const [amount, setAmount] = useState(0)
   const { nombre, descripcion, stock, img } = item;
+  
   const onAdd = (amount) => {
-    console.log(amount);
+    setAmount(amount);
+    
   };
   return (
     <>
@@ -15,8 +20,8 @@ const ItemDetail = ({ item }) => {
             <p className="card-text">{`${stock} unidades!`}</p>
           </div>
           <p className="">{descripcion}</p>
-          <ItemCount stock={stock} initial={0} onAdd={onAdd} />
-          <button type="button" className="btn btn-outline-secondary mt-2">Comprar!</button>
+          {amount === 0 ? <ItemCount stock={stock} initial={0} onAdd={onAdd} /> : <h2>{amount} Agregar Al Carrito</h2>}
+          <Link to="/cart" ><button>Ir Al Carrito</button></Link>
         </div>
         <div></div>
       </div>
