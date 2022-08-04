@@ -1,15 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { GContext } from "../Cart/CartContext";
 
 const ItemDetail = ({ item }) => {
+  const navigate = useNavigate();
   const [amount, setAmount] = useState(0)
+
+  const {addItem} = useContext(GContext);
+  
   const { nombre, descripcion, stock, img } = item;
   
   const onAdd = (amount) => {
-    setAmount(amount);
+    addItem(item, amount)
     
   };
+  
   return (
     <>
       <div className="container m-auto justify-content-center row">
@@ -20,7 +26,15 @@ const ItemDetail = ({ item }) => {
             <p className="card-text">{`${stock} unidades!`}</p>
           </div>
           <p className="">{descripcion}</p>
-          {amount === 0 ? <ItemCount stock={stock} initial={0} onAdd={onAdd} /> : <h2>{amount} Agregar Al Carrito</h2>}
+          {amount === 0 ? <ItemCount stock={stock} initial={0} onAdd={onAdd} /> : <div className="mt-auto">
+                    <button title="Continuar comprando" action={() => navigate(-1)}></button>
+                    <button
+                      title="Terminar mi compra"
+                      bgColor="bg-blue-600"
+                      hover="hover:bg-sky-800"
+                      action={() => navigate("/cart")}></button>
+                  
+                  </div>}
           <Link to="/cart" ><button>Ir Al Carrito</button></Link>
         </div>
         <div></div>
