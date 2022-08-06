@@ -1,11 +1,15 @@
 import React from "react";
+
 const CartItem = ({ item, quantity, removeItem }) => {
+  const { nombre, precio, img } = item;
   return (
     <div className="flex">
-      {item.title} - {item.price} - {quantity}
-      <button className="bg-red-400 rounded-lg p-2" onClick={() => removeItem(item.id)}>
+    <div className=" text-center">
+       {nombre} - ${precio} - Cantidad: {quantity} 
+      <button className="btn btn-info m-2" onClick={() => removeItem(item.id)}>
         Eliminar
       </button>
+    </div>
     </div>
   );
 };

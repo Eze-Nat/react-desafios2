@@ -3,8 +3,10 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Link, useNavigate } from "react-router-dom";
 import { GContext } from "../Cart/CartContext";
 
+
 const ItemDetail = ({ item }) => {
   const navigate = useNavigate();
+  
   const [amount, setAmount] = useState(0)
 
   const {addItem} = useContext(GContext);
