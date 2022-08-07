@@ -2,7 +2,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
-    const title = "Ropita Bebe";
+    const title = "SAPA BABYS";
     return (  
 <nav className="navbar navbar-expand-lg bg-dark navbar-dark nav-justified">
     <div className="container-fluid">

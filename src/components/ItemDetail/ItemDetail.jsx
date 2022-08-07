@@ -20,7 +20,7 @@ const ItemDetail = ({ item }) => {
             <p className="card-text">{`${stock} unidades!`}</p>
           </div>
           <p className="">{descripcion}</p>
-          {amount === 0 ? <ItemCount stock={stock} initial={0} onAdd={onAdd} /> : <h2>{amount} Agregar Al Carrito</h2>}
+          {amount === 0 ? <ItemCount stock={stock} initial={0} onAdd={onAdd} /> : <h2>{amount} unidades agregadas al carrito</h2>}
           <Link to="/cart" ><button>Ir Al Carrito</button></Link>
         </div>
         <div></div>

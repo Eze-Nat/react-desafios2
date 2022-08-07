@@ -36,11 +36,11 @@ const ItemDatabase = [{
     descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio magni sit ad! Non optio ut expedita sit placeat debitis ipsum amet, porro saepe nisi deleniti aperiam. Officia reprehenderit molestiae obcaecati!",
 },{
     id: 6,
-    nombre: "Ropita 6",
-    precio: 1000,
-    img: "/img/img6.jpeg",
+    nombre: "Body francés con broche estampado",
+    precio: 1350,
+    img: "/img/bodynaranjo.jpg",
     categoria: "ropadebebe",
-    stock: 20,
+    stock: 3,
     descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio magni sit ad! Non optio ut expedita sit placeat debitis ipsum amet, porro saepe nisi deleniti aperiam. Officia reprehenderit molestiae obcaecati!",
 },{
     id: 7,
