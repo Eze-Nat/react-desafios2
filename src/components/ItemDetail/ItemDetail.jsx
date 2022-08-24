@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { GContext } from "../CartContext/CartContext";
 
 const ItemDetail = ({ item }) => {
   const [amount, setAmount] = useState(0)
+  const {addItem} = useContext(GContext)
   const { nombre, descripcion, stock, img } = item;
   
   const onAdd = (amount) => {
     setAmount(amount);
+    addItem(item, amount)
   
   };
   return (
@@ -20,8 +23,12 @@ const ItemDetail = ({ item }) => {
             <p className="card-text">{`${stock} unidades!`}</p>
           </div>
           <p className="">{descripcion}</p>
-          {amount === 0 ? <ItemCount stock={stock} initial={0} onAdd={onAdd} /> : <h2>{amount} unidades agregadas al carrito</h2>}
-          <Link to="/cart" ><button>Ir Al Carrito</button></Link>
+          {amount === 0 && <ItemCount stock={stock} initial={0} onAdd={onAdd} />}
+      <div className="d-flex justify-content-center my-3">
+        <Link to="/cart/">
+          <button className="btn btn-warning">Ir al carrito</button>
+        </Link>
+      </div>
         </div>
         <div></div>
       </div>
